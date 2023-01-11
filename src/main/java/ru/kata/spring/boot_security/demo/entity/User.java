@@ -4,27 +4,25 @@ import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Collection;
 
 @Entity
 @Data
-@Table(name = "users")
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "email")
     private String username;
 
     private String password;
 
-    private String firstName;
+    private String email;
 
-    private String lastName;
+    private String name;
 
-    private int Age;
+    private String surname;
 
     @ManyToMany
     @JoinTable(name = "users_roles",

@@ -1,5 +1,7 @@
 package ru.kata.spring.boot_security.demo.service;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import ru.kata.spring.boot_security.demo.entity.Role;
@@ -7,6 +9,8 @@ import ru.kata.spring.boot_security.demo.entity.User;
 
 import java.util.Collection;
 import java.util.List;
+
+@Configuration
 
 public interface UserService extends UserDetailsService {
 
